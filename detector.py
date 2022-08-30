@@ -92,7 +92,7 @@ class detector:
                 src_img_draw = src_img_sc.copy()
                 for kp in preds[0]:
                     #print(kp)
-                    cv2.circle(src_img_draw, tuple(kp), 5, (255, 0, 0), -1)
+                    cv2.circle(src_img_draw, tuple(kp.astype(int)), 5, (255, 0, 0), -1)
                 src_img_draw = cv2.cvtColor(src_img_draw, cv2.COLOR_BGR2RGB)
                 cv2.imwrite("./temp/tmp_%s.png" % idx, src_img_draw)
             

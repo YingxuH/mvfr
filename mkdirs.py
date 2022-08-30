@@ -1,8 +1,10 @@
 """ make dirs for the dataset folder """
 from os import mkdir
 from os.path import exists
+from options import *
 
-dataroot = "/media/xyz/RED31/mvfr_released/dev"
+opt = BaseOptions().parse()
+# dataroot = "/media/xyz/RED31/mvfr_released/dev"
 
 data_structure = {
     "images": "", 
@@ -44,5 +46,5 @@ def create_folder(path, structure):
     return
 
 
-create_folder(dataroot, data_structure)
+create_folder(opt.fit_dataroot, data_structure)
 print("Data folders have been created")

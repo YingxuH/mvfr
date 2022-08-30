@@ -33,7 +33,7 @@ class dataPathController:
         p_id, e_id = face_id.split('_')
         img_dir = self.dataroot + '/images/%s/%s'%(p_id, e_id)
         # TODO: remind to change it back
-        img_dir = "/media/xyz/RED31/mvfr_released/dev" + '/images/%s/%s'%(p_id, e_id)
+        # img_dir = "/media/xyz/RED31/mvfr_released/dev" + '/images/%s/%s'%(p_id, e_id)
         idx_list = self.select_dict[str(int(p_id))][str(int(e_id))]
         img_format = [".jpg"] * len(idx_list)
         
